@@ -14,6 +14,8 @@ import com.braunster.chatsdk.Utils.helper.ChatSDKUiHelper;
 import com.braunster.chatsdk.network.BDefines;
 import com.braunster.chatsdk.network.BNetworkManager;
 import com.braunster.chatsdk.activities.ChatSDKLoginActivity;
+import com.google.android.gms.maps.GoogleMap;
+
 import android.content.Intent;
 
 
@@ -36,16 +38,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         initChat();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-               //         .setAction("Action", null).show();
-                System.out.println("Hello");
                 Intent myIntent = new Intent(MainActivity.this, ChatSDKLoginActivity.class);
                 MainActivity.this.startActivity(myIntent);
             }

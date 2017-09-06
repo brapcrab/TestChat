@@ -193,7 +193,6 @@ public class ChatSDKEditProfileActivity extends ChatSDKBaseActivity implements O
     public void logout() {
         // Logout and return to the login activity.
         BFacebookManager.logout(this);
-
         BNetworkManager.sharedManager().getNetworkAdapter().logout();
         chatSDKUiHelper.startLoginActivity(true);
     }
